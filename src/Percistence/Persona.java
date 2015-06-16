@@ -14,12 +14,12 @@ import javax.persistence.*;
  */
 
 @Entity                  //Entity en una tabla, le estoy diciendo a java que lo trate como una tabla
-@NamedQueries({
-    @NamedQuery(name="persona.findNombreLike", query=" select u from persona u " + "where u.nombre LIKE :nombre")
-})
+//@NamedQueries({
+//    @NamedQuery(name="persona.findNombreLike", query=" select u from persona u " + "where u.nombre LIKE :nombre")
+//})
 
 
-public class Persona {
+public class Persona implements Serializable {
     
     @Id  //indica que la fila de abajo la trate como un id
     private int id;
